@@ -1,7 +1,12 @@
-from app.calc import soma, multiplica, divisao, subtracao
+from app.calc import soma, multiplica, divisao, subtracao, potencia
 
 def test_soma():
     assert soma(2, 3) == 5
+
+def test_potencia():
+    assert potencia(2, 3) == 8
+    assert potencia(5, 0) == 1
+    assert potencia(3, 2) == 9
 
 def test_subtracao():
     assert subtracao(3, 2) == 1
