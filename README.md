@@ -54,7 +54,7 @@ def soma(a, b):
 Após a correção e o envio (commit/push) do código, o pipeline de CI será executado novamente. Desta vez, o `test_soma` passará, demonstrando um ciclo de CI/CD bem-sucedido.
 
 
-## Exercício
+## Exercício 1
 
 **Objetivo:** Adicionar uma nova funcionalidade à calculadora, com seu respectivo teste, e demonstrar o funcionamento do pipeline de CI.
 
@@ -73,6 +73,39 @@ Após a correção e o envio (commit/push) do código, o pipeline de CI será ex
     *   Acesse a aba "Actions" do seu repositório.
     *   Tire um print da tela mostrando o workflow de CI sendo executado com sucesso (com um ícone de "check" verde).
     *   Adicione este print ao seu relatório/entrega para comprovar que você completou o exercício e que suas alterações passaram nos testes automatizados.
+
+## Exercício 2
+
+**Objetivo:** Criar uma branch `feature/aula04` e configurar o CI para não permitir o merge se houver erro.
+
+**Passos:**
+
+1.  **Crie a branch:**
+    *   `git checkout -b feature/aula04`
+2.  **Simule um erro:**
+    *   Altere um teste para falhar ou introduza um erro no código.
+3.  **Faça o push da branch:**
+    *   `git push origin feature/aula04`
+4.  **Crie um Pull Request:**
+    *   Crie um PR da `feature/aula04` para a `main`.
+5.  **Observe o bloqueio:**
+    *   O GitHub Actions irá rodar e falhar, impedindo o merge.
+
+## Exercício 3
+
+**Objetivo:** Criar uma branch `feature/TF_04` onde o merge só é permitido se os testes de integração e unitários passarem.
+
+**Passos:**
+
+1.  **Crie a branch:**
+    *   `git checkout -b feature/TF_04`
+2.  **Garanta que os testes passem:**
+    *   Certifique-se de que todos os testes em `tests/` estão corretos e passando.
+3.  **Configure o CI:**
+    *   Modifique o arquivo `.github/workflows/ci.yml` para que o job de teste só rode na branch `feature/TF_04` e em `main`.
+4.  **Faça o push e crie o Pull Request:**
+    *   `git push origin feature/TF_04`
+    *   Crie o PR e observe que o CI irá rodar e permitir o merge apenas se os testes passarem.
 
 ## Como Entregar o Exercício
 
