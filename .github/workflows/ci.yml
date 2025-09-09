@@ -1,7 +1,15 @@
 # Força execução do CI
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+      - feature/TF_04
+  pull_request:
+    branches:
+      - main
+      - feature/TF_04
 
 jobs:
   test:

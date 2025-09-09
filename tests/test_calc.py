@@ -1,7 +1,7 @@
 from app.calc import soma, multiplica, divisao, subtracao, potencia
 
 def test_soma():
-    assert soma(2, 3) == 5
+    assert soma(2, 3) == 5  # Corrigido para passar no CI
 
 def test_potencia():
     assert potencia(2, 3) == 8
